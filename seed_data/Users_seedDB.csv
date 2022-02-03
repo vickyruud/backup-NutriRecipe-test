@@ -1,12 +1,12 @@
-name,email,password
-Cody Bryan,ubies@we.ly,test
-Josephine Daniels,owlappa@zihcih.re,test
-Millie Fox,dicze@rezsacjim.bj,test
-Nina Steele,ogzokjij@dupha.cg,test
-Rosalie Cortez,pughu@awoaro.tf,test
-Sophia Higgins,ij@an.gr,test
-Zachary Ward,fadoc@caf.bg,test
-Jay Sims,nic@ru.mq,test
-Henrietta Gibbs,wov@cenhaini.sa,test
-Randy Gardner,zeluz@me.eu,test
-Final Project,a@b.c,test
+name,email,password,admin
+Cody Bryan,ubies@we.ly,test,false
+Josephine Daniels,owlappa@zihcih.re,test,false
+Millie Fox,dicze@rezsacjim.bj,test,false
+Nina Steele,ogzokjij@dupha.cg,test,false
+Rosalie Cortez,pughu@awoaro.tf,test,false
+Sophia Higgins,ij@an.gr,test,false
+Zachary Ward,fadoc@caf.bg,test,false
+Jay Sims,nic@ru.mq,test,false
+Henrietta Gibbs,wov@cenhaini.sa,test,false
+Randy Gardner,zeluz@me.eu,test,false
+Final Project,a@b.c,test,true
