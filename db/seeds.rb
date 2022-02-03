@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 
-CSV.foreach('../data/Users_seedDB.csv', headers: true) do |row|
+CSV.foreach('seed_data/Users_seedDB.csv', headers: true) do |row|
   User.create(row.to_h)
 end
