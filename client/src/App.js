@@ -18,7 +18,7 @@ class App extends Component {
 
       console.log(response) // Just the message
       this.setState({
-        message: response.data[0].comment
+        message: response.data[0].name
       });
     }) 
   }
