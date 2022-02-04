@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   def index
-    @user = User.all
+    @user = Comment.all
 
     render :json => @user    
   end
