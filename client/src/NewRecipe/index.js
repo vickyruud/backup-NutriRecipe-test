@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
-import NavBar from './NavBar.js';
-import Button from '@mui/material/Button';
-import Recipe from './Recipe.js'
 
 
-class App extends Component {
-// Instantiation
+class Recipe extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -16,7 +11,7 @@ class App extends Component {
   }
 
   fetchData = () => {
-    axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
+    axios.get('/api/recipes') // You can simply make your requests to "/api/whatever you want"
     .then((response) => {
       // handle success
       console.log(response.data) // The entire response from the Rails API
@@ -30,16 +25,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <NavBar />
+      <div className="Recipe">
         <h1>{ this.state.message }</h1>
-        <Button onClick={this.fetchData} >
+        <button onClick={this.fetchData} >
           Fetch Data
-        </Button>
-        <Recipe />   
+        </button>        
       </div>
     );
   }
 }
 
-export default App;
+export default Recipe;
