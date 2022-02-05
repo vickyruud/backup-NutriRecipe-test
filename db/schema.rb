@@ -15,33 +15,6 @@ ActiveRecord::Schema.define(version: 2022_02_05_193453) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
-    t.boolean "admin", default: false
-    t.boolean "active", default: true
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-   create_table "recipes", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "ingredients"
-    t.string "steps"
-    t.integer "serving_size"
-    t.integer "estimated_time"
-    t.integer "rating"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.bigint "category_id"
-    t.index ["category_id"], name: "index_recipes_on_category_id"
-    t.index ["user_id"], name: "index_recipes_on_user_id"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -68,14 +41,37 @@ ActiveRecord::Schema.define(version: 2022_02_05_193453) do
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
- 
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "ingredients"
+    t.string "steps"
+    t.integer "serving_size"
+    t.integer "estimated_time"
+    t.integer "rating"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_recipes_on_category_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
 
- 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.boolean "admin", default: false
+    t.boolean "active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-  add_foreign_key "recipes", "categories"
-  add_foreign_key "recipes", "users"
-  add_foreign_key "ratings", "recipes"
-  add_foreign_key "ratings", "users"
   add_foreign_key "comments", "recipes"
   add_foreign_key "comments", "users"
+  add_foreign_key "ratings", "recipes"
+  add_foreign_key "ratings", "users"
+  add_foreign_key "recipes", "categories"
+  add_foreign_key "recipes", "users"
 end
