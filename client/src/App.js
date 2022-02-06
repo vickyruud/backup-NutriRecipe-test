@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import NavBar from './components/NavBar';
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -28,11 +30,16 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
+        <NavBar login_name = {'Administrator'} login_right={1} />
+        {/* <NavBar login_name = {'Registered User'} login_right={0} /> */}
+        {/*<NavBar login_name = {''} /> {/* Unregistered User */}
         <h1>{ this.state.message }</h1>
         <Link fetchUsers ={this.fetchUsers} to="/users">User</Link> ||
         <Link fetchRecipes ={this.fetchRecipes} to="/recipes">Recipes</Link>
       </div>
+      
     );
   }
 }
