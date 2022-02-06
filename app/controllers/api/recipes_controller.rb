@@ -1,7 +1,6 @@
 class Api::RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
-
-    render :json => @recipes    
+    render :json => @recipes
   end
 end

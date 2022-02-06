@@ -27,9 +27,13 @@
   },
   "homepage": "https://github.com/NimaBoscarino/stigma#readme",
   "dependencies": {
+<<<<<<< HEAD
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@material/top-app-bar": "^13.0.0",
     "@mui/material": "^5.4.0"
+=======
+    "react-router-dom": "^6.2.1"
+>>>>>>> master
   }
 }
