@@ -23,12 +23,11 @@ const ResponsiveAppBar = (props) => {
   let pages = [];
   let settings = [];
   if (props.login_name !=='') {
-    pages.push('Add New Recipe');
+    pages.push('My Recipes', 'Add New Recipe');
+    settings.push('Sign Out');
     name = props.login_name
     if (props.login_right === 1) {
-      settings.push('My Recipes', 'Admin', 'Sign Out');
-    } else {
-      settings.push('My Recipes', 'Sign Out');
+      pages.push('Admin')
     }
   } else {
       settings.push('Sign In', 'Sign Up');
