@@ -62,12 +62,13 @@ const ResponsiveAppBar = (props) => {
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            <Link href="/data">
+            <Link href="/">
               <Avatar alt="NutriRecipe" src="//res.cloudinary.com/de6puygvt/image/upload/v1644038875/recipes/Nutrition-Wave-Article-Marty-Gallagher_lwzop4.jpg" />
             </Link>
-            NutriRecipe
+            <Link href="/" color="#ffffff" underline="none">NutriRecipe</Link>
           </Typography>
-            Nutrition Facts Simplified
+          <Link href="/" color="#ffffff" underline="none">Nutrition Facts Simplified</Link>
+            
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -110,7 +111,10 @@ const ResponsiveAppBar = (props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            <Avatar alt="NutriRecipe" src="//res.cloudinary.com/de6puygvt/image/upload/v1644039066/recipes/Healthy_Food_2Bsmall_hakuuw.jpg" />
+            <Link href="/">
+              <Avatar alt="NutriRecipe" src="//res.cloudinary.com/de6puygvt/image/upload/v1644038875/recipes/Nutrition-Wave-Article-Marty-Gallagher_lwzop4.jpg" />
+            </Link>
+              NutriRecipe
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -126,7 +130,7 @@ const ResponsiveAppBar = (props) => {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} size='small'>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }} size={'small'}>
                 {name}
                 <KeyboardArrowDownIcon />
               </IconButton>
