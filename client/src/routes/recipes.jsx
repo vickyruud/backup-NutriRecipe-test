@@ -22,7 +22,7 @@ export default function Users() {
 
   return (
     <main>
-      <NavBar login_name = {'Administrator'} login_right={1} />
+      <NavBar login_name = {'Final Project'} login_right={1} />
       <h2>Recipe : {message}</h2>
       <button onClick={fetchRecipes}>Get Recipe</button>
       <Link  to="/">Back to home</Link>

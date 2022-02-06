@@ -4,13 +4,8 @@ Rails.application.routes.draw do
 
   namespace :api do # /api/data
 
-<<<<<<< HEAD
-    get '/data', to: 'users#index'   
-    get '/recipes', to: 'recipes#index'
-=======
     get '/users', to: 'users#index'   
     get '/recipes', to: 'recipes#index'   
->>>>>>> master
     
     resources :dogs
 

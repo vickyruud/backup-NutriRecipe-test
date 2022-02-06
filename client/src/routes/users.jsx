@@ -21,7 +21,7 @@ export default function Users() {
 
   return (
     <main>
-      <NavBar login_name = {'Administrator'} login_right={1} />
+      <NavBar login_name = {'Final Project'} login_right={1} />
       <h2>User : {message}</h2>
       <button onClick={fetchUsers}>Get User</button>
       <Link  to="/">Back to home</Link>
