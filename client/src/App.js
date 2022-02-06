@@ -11,18 +11,7 @@ class App extends Component {
     }
   }
 
-  fetchUsers = () => {
-    axios.get('/api/users') // You can simply make your requests to "/api/whatever you want"
-    .then((response) => {
-      // handle success
-      console.log(response.data) // The entire response from the Rails API
-
-      console.log(response) // Just the message
-      this.setState({
-        message: response.data[0].name
-      });
-    }) 
-  }
+  
 
   fetchRecipes = () => {
     axios.get('/api/recipes') // You can simply make your requests to "/api/whatever you want"
@@ -42,7 +31,7 @@ class App extends Component {
       <div className="App">
         <h1>{ this.state.message }</h1>
         <Link fetchUsers ={this.fetchUsers} to="/users">User</Link> ||
-        <Link fetchRecipes ={this.fetchRecipes} to="recipes">Recipes</Link>
+        <Link fetchRecipes ={this.fetchRecipes} to="/recipes">Recipes</Link>
       </div>
     );
   }
