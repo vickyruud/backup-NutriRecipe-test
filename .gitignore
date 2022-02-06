@@ -51,6 +51,10 @@ bower.json
 # Ignore node_modules
 node_modules/
 
+#Ignore seed_data
+seed_data/
+
+
 # Ignore precompiled javascript packs
 /public/packs
 /public/packs-test

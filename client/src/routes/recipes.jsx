@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import NavBar from '../components/NavBar';
 
 
 
@@ -20,7 +21,8 @@ export default function Users() {
   }
 
   return (
-    <main style={{ padding: "1rem 0" }}>
+    <main>
+      <NavBar login_name = {'Administrator'} login_right={1} />
       <h2>Recipe : {message}</h2>
       <button onClick={fetchRecipes}>Get Recipe</button>
       <Link  to="/">Back to home</Link>
