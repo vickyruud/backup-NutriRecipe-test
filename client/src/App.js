@@ -37,8 +37,8 @@ class App extends Component {
         {/*<NavBar login_name = {'Registered User'} login_right={0} /> */}
         {/* <NavBar login_name = {''} /> {/* Unregistered User */}
         <h1>{ this.state.message }</h1>
-        <Link fetchUsers ={this.fetchUsers} to="/users">User</Link> ||
-        <Link fetchRecipes ={this.fetchRecipes} to="/recipes">Recipes</Link>
+        <Link  to="/users">User</Link> ||
+        <Link  to="/recipes">Recipes</Link>
       </div>
       
     );
